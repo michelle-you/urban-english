@@ -2,14 +2,31 @@ body {
     text-align: center;
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
+    flex-direction: column; 
 }
 h1 {
     font-size: 2em;
-    color: #7FC7B9;
+    color: white;
+    background: linear-gradient(-180deg, #7FC7B9, #FFA852);
 }
 main {
     flex: 1 0 auto;
+}
+#gifs {
+    background-color: #7FC7B9;
+    color: white;
+}
+#card-body { 
+    background-color: white;
+    color: #7FC7B9;
+    text-align: center;
+}
+#history {
+    background-color: #7FC7B9;
+    color: white;
+}
+#space-between {
+    line-height: 2em;
 }
 #left-card {
     background-color: #7FC7B9;
@@ -20,5 +37,6 @@ main {
     color: white;
 }
 #footer {
-    background-color: #7FC7B9;
+    background: linear-gradient(-180deg, #7FC7B9, #FFA852);
+    
 }

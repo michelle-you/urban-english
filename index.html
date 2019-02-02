@@ -15,10 +15,12 @@
 <body>
     <!-- Header -->
     <header>
-    <div class="container">
-        <div class="row">
-            <div class="col s12"><h1>Urban English</h1></div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12"><h1>Urban English</h1></div>
     </header>
+
+
         <!-- Search Bar -->
     <main>
         <div class="row">
@@ -26,31 +28,76 @@
                     <div class="input-field col s6">
                         <input type="text" id="input-field">
                             <div class="col s3"></div>
-                                <label for="input-field"></label>
+                                <label for="input-field">What word would you like to learn about?</label>
                             </div>
                         </div>
-                    <button class="btn waves-effect waves-light s3" type="submit" name="action" id="search-button">Submit</button>
+                    <button class="btn waves-effect waves-light s3" type="submit" name="action" id="search-button">Search</button>
                 </div>
             </div>
 
-        <!-- Dictionary Card -->
-        <div class="row">
-            <div class="col s2"></div>
-                <div class="col s4 card-panel" id="left-card">Dictionary API</div>
 
+        <!-- Dictionary Card -->
+        <div class="row"></div>
+            <div class="row" id="space-between">
+            <div class="col s2"></div>
+                <div class="col s4 card-panel" id="left-card"><h5>Dictionary API</h5>
+                    <div class="row">
+                        <div class="col s12" id="card-body">
+                        I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                        </div>
+                    </div>
+                </div>
+                
+
+                    
         <!-- Urban Dictionary Card -->
-            <div class="card-panel col s4" id="right-card">Urban Dictionary API</div>
+            <div class="card-panel col s4" id="right-card"><h5>Urban Dictionary API</h5>
+                <div class="row">
+                    <div class="col s12" id="card-body">I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                    </div>
+                </div>
+            </div>
+            <div class="col s2"></div>
+            </div>
+
+
+        <!-- GIPHY Card -->
+        <div class="row">
                 <div class="col s2"></div>
+                    <div class="card-panel col s8" id="gifs"><h5>GIPHY API</h5>
+                        <div class="row">
+                            <div class="col s2" id="card-body"><img src="">
+                                <div class="col s2"><img src="">
+                                    <div class="col s2"><img src="">
+                                        <div class="col s2"><img src="">
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col s2"></div>
+                </div>
             </div>
 
         <!-- Previous Search Card -->
             <div class="row">
                 <div class="col s2"></div>
-                <div class="card-panel col s8">Previous Searches</div>
+                    <div class="card-panel col s8" id="history"><h5>Previous Searches</h5>
+                        <div class="row">
+                            <div class="col s12" id="card-body">I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                            </div>
+                        </div>
+                    </div>
                 <div class="col s2"></div>
             </div>
         </div>
     </main>
+
+
     <!-- FOOOTER -->
     <footer class="page-footer" id="footer">
             <div class="container">
