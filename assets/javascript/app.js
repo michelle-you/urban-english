@@ -12,16 +12,16 @@ previous searches: #history
 $(document).on("click", "#search-button", function() {
 
     /*clears previously searched content */
-    $("#left-card").empty();
-    $("#right-card").empty();
+    $("#left-data").empty();
+    $("#right-data").empty();
 
     /*Ajax variable shenanigans */
     var wordToSearch = $("#input-field").val().split(' ').join('+').trim();
     var googleURL = "https://googledictionaryapi.eu-gb.mybluemix.net/?define=" + wordToSearch + "&lang=en";
     var urbanURL = "http://api.urbandictionary.com/v0/define?term={" + wordToSearch + "}";
 
-    var $leftCard = $("#left-card");
-    var $rightCard = $("#right-card");
+    var $leftData = $("#left-data");
+    var $rightData = $("#right-data");
 
     /* queries google URL */
     $.ajax({
@@ -32,17 +32,15 @@ $(document).on("click", "#search-button", function() {
         .then(function(response) {
 
             var searchedWord = response[0].word;
-            var definition = response[0].meaning;
+            var getDefinition = response[0].meaning;
+            var values = $.map(getDefinition, function(value, key) {
+                return value;
+            });
+            var definition = values[0].definition;
             console.log(searchedWord);
             console.log(definition);
-            var getKeys = definition;
-            var keys = $.map(definition, function(value, key) {
-                return value;
-            
-            });
 
-            console.log(keys);
-            console.log(keys[0].definition);
+            $leftData.text(definition);
             
         /* closes then function */
         }); 
