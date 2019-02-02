@@ -19,10 +19,37 @@ $(document).on("click", "#search-button", function() {
     var googleURL = "https://googledictionaryapi.eu-gb.mybluemix.net/?define=" + wordToSearch + "&lang=en";
     var urbanURL = "http://api.urbandictionary.com/v0/define?term={" + wordToSearch + "}";
 
-    console.log(googleURL);
-    console.log(urbanURL);
-    
+    var $leftCard = $("#left-card");
+    var $rightCard = $("#right-card");
 
+    /* queries google URL */
+    $.ajax({
+        url: googleURL,
+        method: "GET"
+    })
+
+        .then(function(response) {
+            console.log(response.data);
+            $leftCard.text(response);
+            
+        /* closes then function */
+        }); 
+
+    /* queries urban dictionary API */
+    $.ajax({
+        url: urbanURL,
+        method: "GET"
+    })
+
+        .then(function(response) {
+            console.log(response.data);
+            $rightCard.text(response);
+            
+        /* closes then function */
+        }); 
+
+    
+/*closes click function */
 });
 
 
