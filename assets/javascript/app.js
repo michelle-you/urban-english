@@ -15,10 +15,12 @@ $(document).on("click", "#search-button", function() {
     $("#right-card").empty();
 
     /*Ajax variable shenanigans */
-    var wordToSearch = $("#input-field").val().trim();
+    var wordToSearch = $("#input-field").val().split(' ').join('+').trim();
     var googleURL = "https://googledictionaryapi.eu-gb.mybluemix.net/?define=" + wordToSearch + "&lang=en";
     var urbanURL = "http://api.urbandictionary.com/v0/define?term={" + wordToSearch + "}";
 
+    console.log(googleURL);
+    console.log(urbanURL);
     
 
 });
