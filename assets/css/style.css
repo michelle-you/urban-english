@@ -16,7 +16,7 @@ main {
     background-color: #7FC7B9;
     color: white;
 }
-#card-body { 
+#card-body, #left-data, #right-data, #history-data { 
     background-color: white;
     color: #7FC7B9;
     text-align: center;
@@ -37,6 +37,6 @@ main {
     color: white;
 }
 #footer {
-    background: linear-gradient(-180deg, #7FC7B9, #FFA852);
+    background: linear-gradient(-180deg, white, #FFA852);
     
 }
