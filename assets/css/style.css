@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+h1 {
+    font-size: 2em;
+    color: #7FC7B9;
+}
+main {
+    flex: 1 0 auto;
+}
+#left-card {
+    background-color: #7FC7B9;
+    color: white;
+}
+#right-card {
+    background-color: #7FC7B9;
+    color: white;
+}
+#footer {
+    background-color: #7FC7B9;
+}
