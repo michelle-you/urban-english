@@ -10,31 +10,106 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Urban English</title>
 </head>
+
+
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col s12">Urban English</div>
-        
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col s12"><h1>Urban English</h1></div>
+    </header>
+
+
+        <!-- Search Bar -->
+    <main>
         <div class="row">
             <div class="col s3"></div>
                     <div class="input-field col s6">
                         <input type="text" id="input-field">
-                            <label for="input-field"></label>
+                            <div class="col s3"></div>
+                                <label for="input-field">What word would you like to learn about?</label>
+                            </div>
+                        </div>
+                    <button class="btn waves-effect waves-light s3" type="submit" name="action" id="search-button">Search</button>
+                </div>
+            </div>
+
+
+        <!-- Dictionary Card -->
+        <div class="row"></div>
+            <div class="row" id="space-between">
+            <div class="col s2"></div>
+                <div class="col s4 card-panel" id="left-card"><h5>Dictionary API</h5>
+                    <div class="row">
+                        <div class="col s12 card-panel" id="left-data">
+                        I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
                         </div>
                     </div>
-                    <button class="btn waves-effect waves-light s3" type="submit" name="action" id="search-button">Submit
-                    </button>
+                </div>
+                
+
+                    
+        <!-- Urban Dictionary Card -->
+            <div class="card-panel col s4" id="right-card"><h5>Urban Dictionary API</h5>
+                <div class="row">
+                    <div class="col s12 card-panel" id="right-data">I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                    </div>
+                </div>
+            </div>
+            <div class="col s2"></div>
+            </div>
+
+
+        <!-- GIPHY Card -->
+        <div class="row">
+                <div class="col s2"></div>
+                    <div class="card-panel col s8" id="gifs"><h5>GIPHY API</h5>
+                        <div class="row">
+                            <div class="col s3 card-panel"><img src=""></div>
+                                <div class="col s3 card-panel"><img src=""></div>
+                                    <div class="col s3 card-panel"><img src=""></div>
+                                        <div class="col s3 card-panel"><img src=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col s2"></div>
+                </div>
+           
+
+        <!-- Previous Search Card -->
+            <div class="row">
+                <div class="col s2"></div>
+                    <div class="card-panel col s8" id="history"><h5>Previous Searches</h5>
+                        <div class="row">
+                            <div class="col s12 card-panel" id="history-data">I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                            </div>
+                        </div>
+                    </div>
+                <div class="col s2"></div>
             </div>
         </div>
+    </main>
 
-        <div class="row">
-            <div class="col s6 card-panel teal lighten-2" id="left-card">Dictionary API</div>
-            <div class="col s6" id="right-card">Urban Dictionary API</div>
-        </div>
-        <div class="row">
-            <div class="col s12">Previous Searches</div>
-        </div>
-    </div>
+
+    <!-- FOOOTER -->
+    <footer class="page-footer" id="footer">
+            <div class="container">
+                </div>
+                <div class="s12">
+                </div>
+            <div class="footer-copyright">
+              <div class="container">
+              © 2019 Urban English
+              </div>
+            </div>
+          </footer>
+
+
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
