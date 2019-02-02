@@ -5,6 +5,7 @@ search form: #input-field
 search button: #search-button
 left section: #left-card
 right section: #right-card
+previous searches: #history
 ---------------------------- */
 
 /*queries APIs upon button click */
@@ -29,13 +30,26 @@ $(document).on("click", "#search-button", function() {
     })
 
         .then(function(response) {
-            console.log(response.data);
-            $leftCard.text(response);
+
+            var searchedWord = response[0].word;
+            var definition = response[0].meaning;
+            console.log(searchedWord);
+            console.log(definition);
+            var getKeys = definition;
+            var keys = $.map(definition, function(value, key) {
+                return value;
+            
+            });
+
+            console.log(keys);
+            console.log(keys[0].definition);
             
         /* closes then function */
         }); 
 
-    /* queries urban dictionary API */
+    /* 
+
+    /* queries urban dictionary
     $.ajax({
         url: urbanURL,
         method: "GET"
@@ -45,7 +59,7 @@ $(document).on("click", "#search-button", function() {
             console.log(response.data);
             $rightCard.text(response);
             
-        /* closes then function */
+        /* closes then function
         }); 
 
     
