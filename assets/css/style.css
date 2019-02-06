@@ -19,7 +19,9 @@ main {
 #card-body, #left-data, #right-data, #history-data { 
     background-color: white;
     color: #7FC7B9;
-    text-align: center;
+    overflow-y: scroll;
+    height: 200px;
+    padding: 5%;
 }
 #history {
     background-color: #7FC7B9;
@@ -31,12 +33,14 @@ main {
 #left-card {
     background-color: #7FC7B9;
     color: white;
+    height: 300px;
+    
 }
 #right-card {
     background-color: #7FC7B9;
     color: white;
+    height: 300px;
 }
 #footer {
     background: linear-gradient(-180deg, white, #FFA852);
-    
 }
