@@ -18,6 +18,8 @@ $(document).on("click", "#search-button", function() {
     
     else {
 
+    $("#search-button").text("Search");
+
     /*clears previously searched content */
     $("#left-data").empty();
     $("#right-data").empty();
