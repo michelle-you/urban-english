@@ -45,19 +45,20 @@ $(document).on("click", "#search-button", function() {
         /* closes then function */
         }); 
 
-    /* 
+   
 
-    /* queries urban dictionary
+    /*queries urban dictionary*/
     $.ajax({
         url: urbanURL,
         method: "GET"
     })
 
         .then(function(response) {
-            console.log(response.data);
-            $rightCard.text(response);
+            console.log(response.list[0].definition);
+            var dictDef = response.list[0].definition;
+            $rightData.text(dictDef);
             
-        /* closes then function
+         //closes then function
         }); 
 
     
