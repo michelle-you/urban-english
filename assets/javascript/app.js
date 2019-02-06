@@ -11,6 +11,13 @@ previous searches: #history
 /*queries APIs upon button click */
 $(document).on("click", "#search-button", function() {
 
+    if ($("#input-field").val() === "") {
+
+        $("#search-button").text("Search for something, yo");
+    }
+    
+    else {
+
     /*clears previously searched content */
     $("#left-data").empty();
     $("#right-data").empty();
@@ -86,7 +93,9 @@ $(document).on("click", "#search-button", function() {
         //closes then function
         });
 
-    
+    //if else test bracket
+    };
+
 /*closes click function */
 });
 
