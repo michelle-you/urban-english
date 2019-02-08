@@ -1,3 +1,38 @@
+//Firebase//
+var config = {
+    apiKey: "AIzaSyB9qb1i9kbIP0Ln5rKS_wvdMpXzyzFg_74",
+    authDomain: "urbanenglish-30247.firebaseapp.com",
+    databaseURL: "https://urbanenglish-30247.firebaseio.com",
+    projectId: "urbanenglish-30247",
+    storageBucket: "urbanenglish-30247.appspot.com",
+    messagingSenderId: "114402639941"
+  };
+  
+  firebase.initializeApp(config);
+  
+  var userData = firebase.database();
+
+  $("#search-button").on("click", function() {
+    var searchedWord = $("#input-field").val().trim();
+
+//Object for storing data in Firebase//
+    var addedWord = {
+        
+        word: searchedWord
+    };
+
+//Push word to Firebase//
+    userData.ref().push(addedWord);
+  });
+
+//Append to page// 
+  userData.ref().on("child_added", function(childSnapshot) {
+      var pushedWord = childSnapshot.val().word;
+      $("#history-data").append(pushedWord + ", ");
+
+  });
+
+
 $(document).ready(function() {
 
 /* ----- IDs -----------------
@@ -10,6 +45,16 @@ previous searches: #history
 
 /*queries APIs upon button click */
 $(document).on("click", "#search-button", function() {
+
+    if ($("#input-field").val() === "") {
+//Changed background color when input field is empty and change inner text//
+        $("#search-button").text("Search for something, yo").css("background-color", "plum");
+
+    }
+    
+    else {
+//Once a search with an input exists, change buttons text and color back to original state//
+        $("#search-button").text("Search").css("background-color", "#7FC7B9");
 
     /*clears previously searched content */
     $("#left-data").empty();
@@ -86,7 +131,9 @@ $(document).on("click", "#search-button", function() {
         //closes then function
         });
 
-    
+    //if else test bracket
+    };
+
 /*closes click function */
 });
 
