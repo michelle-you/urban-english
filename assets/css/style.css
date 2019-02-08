@@ -3,12 +3,14 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column; 
-    font-family: 'Quicksand', sans-serif;
+    
 }
 h1 {
     font-size: 2em;
     color: white;
     background: linear-gradient(-180deg, #7FC7B9, #FFA852);
+    font-family: "quick";
+
 }
 main {
     flex: 1 0 auto;
@@ -22,7 +24,7 @@ main {
     color: #7FC7B9;
     overflow-y: scroll;
     height: 200px;
-    padding: 5%;
+    padding: 1%;
 }
 #history {
     background-color: #7FC7B9;
@@ -45,3 +47,32 @@ main {
 #footer {
     background: linear-gradient(-180deg, white, #FFA852);
 }
+
+@font-face {
+    font-family: "quick";
+    src: url('../fonts/Quicksand-BoldItalic.otf') format('opentype');
+}
+
+h5, #search-button {
+    font-family: "quick";
+
+}
+
+@font-face {
+    font-family: "geo";
+    src: url('../fonts/geometria-light-webfont.woff') format('woff');
+
+}
+
+
+
+#input-field, #history-data, #left-data, #right-data{
+    font-family: "geo";
+
+}
+
+#search-button:hover {
+    background:#FFA852;
+    opacity:.3;
+}
+

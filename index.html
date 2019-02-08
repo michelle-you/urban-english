@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
+   
+    
     <title>Urban English</title>
 </head>
 
@@ -32,7 +34,7 @@
                                 <label for="input-field"></label>
                             </div>
                         </div>
-                    <button class="btn waves-effect waves-light s3" type="submit" name="action" id="search-button">Search</button>
+                    <button class="btn waves-effect waves-light s3 autocomplete" type="submit" name="action" id="search-button">Search</button>
                 </div>
             </div>
 
@@ -85,8 +87,7 @@
                 <div class="col s2"></div>
                     <div class="card-panel col s8" id="history"><h5>Previous Searches</h5>
                         <div class="row">
-                            <div class="col s12 card-panel" id="history-data">I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                            <div class="col s12 card-panel" id="history-data">
                             </div>
                         </div>
                     </div>
