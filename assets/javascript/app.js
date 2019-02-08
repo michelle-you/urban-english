@@ -40,7 +40,7 @@ $(document).on("click", "#search-button", function() {
 
         //Changed background color when input field is empty and change inner text//
         $("#search-button").text("Search for something, yo").css("background-color", "plum");
-        $("h1").text("Urban Dictionary");
+        $("p").text("Urban Dictionary");
 
     }
     
