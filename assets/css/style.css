@@ -1,0 +1,117 @@
+body {
+    text-align: center;
+    font-size: 1.2em;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column; 
+    scroll-behavior: unset;
+}
+#input-field {
+    font-size: 1.2em;
+}
+input {
+    text-align: center;
+    
+}
+p {
+    font-size: 4em;
+    color: white;
+    background: linear-gradient(-180deg, #7FC7B9, #FFA852);
+    font-family: "quick";
+    padding: 3%;
+    
+
+}
+main {
+    flex: 1 0 auto;
+}
+#gifs {
+    background-color: #7FC7B9;
+    color: white;
+}
+.image-holder {
+    display: inline-block;
+    overflow: hidden;
+    max-height: 100%;
+    max-width: 100%;
+}
+#card-body, #left-data, #right-data, #history-data { 
+    background-color: white;
+    color: #7FC7B9;
+    overflow-y: scroll;
+    height: 200px;
+    padding: 1%;
+}
+#history {
+    background-color: #7FC7B9;
+    color: white;
+}
+#space-between {
+    line-height: 1.5em;
+}
+#left-card {
+    background-color: #7FC7B9;
+    color: white;
+    height: 300px; 
+}
+#right-card {
+    background-color: #7FC7B9;
+    color: white;
+    height: 300px;
+}
+#footer {
+    background: linear-gradient(-180deg, white, #FFA852);
+}
+@font-face {
+    font-family: "quick";
+    src: url('../fonts/Quicksand-BoldItalic.otf') format('opentype');
+}
+h5, #search-button {
+    font-family: "quick";
+}
+@font-face {
+    font-family: "geo";
+    src: url('../fonts/geometria-light-webfont.woff') format('woff');
+}
+#input-field, #history-data, #left-data, #right-data{
+    font-family: "geo";
+}
+#search-button:hover {
+    background:#FFA852;
+    opacity:.3;
+}
+.test {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+
+    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 4s; /* Firefox < 16 */
+    -ms-animation: fadein 4s; /* Internet Explorer */
+    -o-animation: fadein 4s; /* Opera < 12.1 */
+    animation: fadein 4s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+    
+    /* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+       
