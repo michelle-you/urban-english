@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 //Firebase//
 var config = {
     apiKey: "AIzaSyB9qb1i9kbIP0Ln5rKS_wvdMpXzyzFg_74",
@@ -11,29 +13,6 @@ var config = {
   firebase.initializeApp(config);
   
   var userData = firebase.database();
-
-  $("#search-button").on("click", function() {
-    var searchedWord = $("#input-field").val().trim();
-
-//Object for storing data in Firebase//
-    var addedWord = {
-        
-        word: searchedWord
-    };
-
-//Push word to Firebase//
-    userData.ref().push(addedWord);
-  });
-
-//Append to page// 
-  userData.ref().on("child_added", function(childSnapshot) {
-      var pushedWord = childSnapshot.val().word;
-      $("#history-data").append(pushedWord + ", ");
-
-  });
-
-
-$(document).ready(function() {
 
 /* ----- IDs -----------------
 search form: #input-field
@@ -72,6 +51,14 @@ $(document).on("click", "#search-button", function() {
 
         var $leftData = $("#left-data");
         var $rightData = $("#right-data");
+
+        //Object for storing data in Firebase//
+        var addedWord = {
+                word: wordToSearch
+            };
+            
+        //Push word to Firebase//
+        userData.ref().push(addedWord);
 
         /* queries google URL */
         $.ajax({
@@ -139,6 +126,12 @@ $(document).on("click", "#search-button", function() {
 /*closes click function */
 });
 
+//Append firebase data to page// 
+userData.ref().on("child_added", function(childSnapshot) {
+    var pushedWord = childSnapshot.val().word;
+    $("#history-data").append(pushedWord + ", ");
+
+});
 
 /*last closing bracket */
 });
