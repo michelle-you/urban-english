@@ -1,10 +1,18 @@
 body {
     text-align: center;
+    font-size: 1.2em;
     display: flex;
     min-height: 100vh;
     flex-direction: column; 
     scroll-behavior: unset;
 
+}
+#input-field {
+    font-size: 1.2em;
+}
+input {
+    text-align: center;
+    
 }
 h1 {
     font-size: 2em;
@@ -106,4 +114,4 @@ h5, #search-button {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
+       
