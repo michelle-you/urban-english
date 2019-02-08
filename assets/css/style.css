@@ -25,6 +25,7 @@ main {
     display: inline-block;
     overflow: hidden;
     max-height: 100%;
+    max-width: 100%;
 }
 #card-body, #left-data, #right-data, #history-data { 
     background-color: white;
