@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-//Firebase//
+//Firebase
 var config = {
     apiKey: "AIzaSyB9qb1i9kbIP0Ln5rKS_wvdMpXzyzFg_74",
     authDomain: "urbanenglish-30247.firebaseapp.com",
@@ -22,7 +22,21 @@ right section: #right-card
 previous searches: #history
 ---------------------------- */
 
-/*queries APIs upon button click */
+//enter as click
+$('#input-field').keypress(function(e){
+
+    if(e.which == 13){
+
+        $('#search-button').click();
+    }
+
+//closes enter/click function
+});
+
+
+
+
+// queries APIs upon button click
 $(document).on("click", "#search-button", function() {
 
     if ($("#input-field").val() === "") {
@@ -37,12 +51,12 @@ $(document).on("click", "#search-button", function() {
         //Once a search with an input exists, change buttons text and color back to original state//
         $("#search-button").text("Search").css("background-color", "#7FC7B9");
 
-        /*clears previously searched content */
+        //clears previously searched content
         $("#left-data").empty();
         $("#right-data").empty();
         $("#card-body").empty();
 
-        /*Ajax variable shenanigans */
+        //Ajax variable shenanigans
         var wordToSearch = $("#input-field").val().split(' ').join('+').trim();
         var aKey = "&api_key=7K9LQeTsgpgNcUHfzSivmYoR4EkxZ8x5&rating=g&limit=4";
         var googleURL = "https://googledictionaryapi.eu-gb.mybluemix.net/?define=" + wordToSearch + "&lang=en";
@@ -60,7 +74,7 @@ $(document).on("click", "#search-button", function() {
         //Push word to Firebase//
         userData.ref().push(addedWord);
 
-        /* queries google URL */
+        //queries google URL
         $.ajax({
             url: googleURL,
             method: "GET"
@@ -123,15 +137,19 @@ $(document).on("click", "#search-button", function() {
     //if else test bracket
     };
 
-/*closes click function */
+    //clears search box
+    $("#input-field").val("");
+
+//closes click function
 });
 
-//Append firebase data to page// 
-userData.ref().on("child_added", function(childSnapshot) {
-    var pushedWord = childSnapshot.val().word;
-    $("#history-data").append(pushedWord + ", ");
+    //Append firebase data to page
+    userData.ref().on("child_added", function(childSnapshot) {
+        var pushedWord = childSnapshot.val().word;
+        $("#history-data").append(pushedWord + ", ");
 
-});
+    //closes firebase function
+    });
 
-/*last closing bracket */
+//last closing bracket
 });
