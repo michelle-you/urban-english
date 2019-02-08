@@ -3,7 +3,8 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column; 
-    
+    scroll-behavior: unset;
+
 }
 h1 {
     font-size: 2em;
@@ -19,6 +20,11 @@ main {
 #gifs {
     background-color: #7FC7B9;
     color: white;
+}
+.image-holder {
+    display: inline-block;
+    overflow: hidden;
+    max-height: 100%;
 }
 #card-body, #left-data, #right-data, #history-data { 
     background-color: white;
@@ -37,8 +43,7 @@ main {
 #left-card {
     background-color: #7FC7B9;
     color: white;
-    height: 300px;
-    
+    height: 300px; 
 }
 #right-card {
     background-color: #7FC7B9;
@@ -48,30 +53,20 @@ main {
 #footer {
     background: linear-gradient(-180deg, white, #FFA852);
 }
-
 @font-face {
     font-family: "quick";
     src: url('../fonts/Quicksand-BoldItalic.otf') format('opentype');
 }
-
 h5, #search-button {
     font-family: "quick";
-
 }
-
 @font-face {
     font-family: "geo";
     src: url('../fonts/geometria-light-webfont.woff') format('woff');
-
 }
-
-
-
 #input-field, #history-data, #left-data, #right-data{
     font-family: "geo";
-
 }
-
 #search-button:hover {
     background:#FFA852;
     opacity:.3;
