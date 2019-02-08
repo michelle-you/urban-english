@@ -22,7 +22,7 @@ main {
     color: #7FC7B9;
     overflow-y: scroll;
     height: 200px;
-    padding: 5%;
+    padding: 1%;
 }
 #history {
     background-color: #7FC7B9;
@@ -44,4 +44,9 @@ main {
 }
 #footer {
     background: linear-gradient(-180deg, white, #FFA852);
+}
+.image-holder {
+    display: inline;
+    margin: 5px;
+    max-width: 310px;
 }
