@@ -14,12 +14,13 @@ input {
     text-align: center;
     
 }
-h1 {
-    font-size: 2em;
+p {
+    font-size: 4em;
     color: white;
     background: linear-gradient(-180deg, #7FC7B9, #FFA852);
     font-family: "quick";
     padding: 3%;
+    
 
 }
 main {
@@ -86,10 +87,10 @@ h5, #search-button {
     text-align: center;
 
     -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein 4s; /* Firefox < 16 */
-        -ms-animation: fadein 4s; /* Internet Explorer */
-            -o-animation: fadein 4s; /* Opera < 12.1 */
-            animation: fadein 4s;
+    -moz-animation: fadein 4s; /* Firefox < 16 */
+    -ms-animation: fadein 4s; /* Internet Explorer */
+    -o-animation: fadein 4s; /* Opera < 12.1 */
+    animation: fadein 4s;
 }
 
 @keyframes fadein {

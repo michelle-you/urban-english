@@ -65,7 +65,7 @@ $(document).on("click", "#search-button", function() {
         var $rightData = $("#right-data");
 
         //replaces title with searched word
-        $("h1").text(wordToSearch);
+        $("p").text(wordToSearch);
 
         //Object for storing data in Firebase//
         var addedWord = {
