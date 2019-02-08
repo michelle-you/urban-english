@@ -58,7 +58,7 @@ $(document).on("click", "#search-button", function() {
         var wordToSearch = $("#input-field").val().split(' ').join('+').trim();
         var aKey = "&api_key=7K9LQeTsgpgNcUHfzSivmYoR4EkxZ8x5&rating=g&limit=4";
         var googleURL = "https://googledictionaryapi.eu-gb.mybluemix.net/?define=" + wordToSearch + "&lang=en";
-        var urbanURL = "http://api.urbandictionary.com/v0/define?term={" + wordToSearch + "}";
+        var urbanURL = "https://api.urbandictionary.com/v0/define?term={" + wordToSearch + "}";
         var giphyURL = "https://api.giphy.com/v1/gifs/search?q=" + wordToSearch + aKey;
 
         var $leftData = $("#left-data");
